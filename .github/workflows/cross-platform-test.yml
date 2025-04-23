@@ -27,8 +27,8 @@ jobs:
           pip install -r requirements.txt
       
       - name: Add project directory to PYTHONPATH
-        run: echo "${{ github.workspace }}" > $GITHUB_ENV
+        run: echo "PYTHONPATH=${{ github.workspace }}" >> $GITHUB_ENV
       
       - name: Run tests with coverage
         run: |
-          PYTHONPATH=$PYTHONPATH:${{ github.workspace }} pytest --cov=sysdox --cov-report=term-missing
+          pytest --cov=sysdox --cov-report=term-missing
