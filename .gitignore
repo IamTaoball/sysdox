@@ -44,5 +44,4 @@ npm-debug.log
 .idea/
 .vscode/
 .pytest_cache/
-tests/
 *.egg-info/
