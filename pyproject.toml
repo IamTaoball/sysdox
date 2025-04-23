@@ -1,0 +1,24 @@
+[project]
+name = "sysdox"
+version = "1.0.0"
+description = "A comprehensive system info dumper"
+readme = "README.md"
+requires-python = ">=3.7"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Taoball", email = "yetimhanesultani@hotmail.com" }
+]
+dependencies = [
+    "psutil"
+]
+
+[project.scripts]
+sysdox = "sysdox.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["sysdox"]
